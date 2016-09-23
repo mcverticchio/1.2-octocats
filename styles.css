@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
 .octocat {
   display: inline-block;
-  vertical-align: top;
   width:30%;
-  margin:0;
-  padding:10px;
+  list-style: none;
+  margin-left:24px;
 }
 
 .octocat img {
@@ -11,65 +17,66 @@
   border: 1px solid lightgray;
   border-width: thin;
   border-radius: 2px;
+  display:inline-block;
 }
 
 
 .image-footer {
-  display: inline-block;
+  position: relative;
   border-bottom: 1px solid lightgray;
   font-size:15px;
   font-weight: bold;
-  text-align: right;
-  padding: 0px 0 0;
+  margin-top: 10px
 }
 
-
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-
-  border-top: 10px solid lightgray;
-  float: right;
-}
 
 .image-number {
   color: lightgray;
   float: left;
-
+  padding-top: 10px;
 }
 .image-number:before {
   content:"#";
 }
 
 
-.image-caption span {
+.image-caption {
+  text-align: right;
   color: gray;
+  line-height: 25px;
 }
 
 .image-caption a {
-  display: inline-block;
   color: black;
   text-decoration: none;
-
 }
 
 ul {
+  display: inline-block;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.authors {
+.authors,
+.authors a,
+.authors li {
   display: inline-block;
   border-radius: 3px;
-}
-
-.authors img {
-  width: 100%;
+  list-style: none;
+  vertical-align: middle;
 }
 
 .authors a {
-  width: 8%;
+  width: 30px;
+}
+
+.authors::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 8px solid transparent;
+  border-top-color: #C3C3C3;
+  top: -14px;
+  right: 10px;
 }
